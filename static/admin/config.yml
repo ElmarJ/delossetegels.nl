@@ -10,7 +10,7 @@ logo_url: https://delossetegels.nl/uploads/logo.jpg
 collections: # A list of collections the CMS should be able to edit
   - name: "episodes" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Afleveringen" # Used in the UI, ie.: "New Post"
-    folder: "site/content/episode" # The path to the folder where the documents are stored
+    folder: "content/episode" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     identifier_field: "title"
     fields: # The fields each document in this collection have
@@ -33,7 +33,7 @@ collections: # A list of collections the CMS should be able to edit
 
   - name: "guests" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Mensen" # Used in the UI, ie.: "New Post"
-    folder: "site/content/guest" # The path to the folder where the documents are stored
+    folder: "content/guest" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     identifier_field: "shortname"
     fields: # The fields each document in this collection have
@@ -56,20 +56,20 @@ collections: # A list of collections the CMS should be able to edit
     files:
       - label: "Over de Podcast"
         name: "about"
-        file: "site/content/about.md"
+        file: "content/about.md"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Description, name: description, widget: markdown}
           - {label: Body, name: body, widget: markdown}
       - label: "Over Stadsdeelpolitiek"
         name: "stadsdeel"
-        file: "site/content/stadsdeel.md"
+        file: "content/stadsdeel.md"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Body, name: body, widget: markdown}
       - label: "Over GroenLinks Amsterdam"
         name: "groenlinks"
-        file: "site/content/contact.md"
+        file: "content/contact.md"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Body, name: body, widget: markdown}
@@ -79,7 +79,7 @@ collections: # A list of collections the CMS should be able to edit
     files:
       - label: "Site-instellingen"
         name: "site-settings"
-        file: "site/data/settings.toml"
+        file: "data/settings.toml"
         fields:
           - {label: Theme, name: site_theme, widget: select,  options: ["blue", "grey", "orange"]}
           - {label: Layout, name: site_layout, widget: select,  options: ["grid", "row"]}
@@ -88,7 +88,7 @@ collections: # A list of collections the CMS should be able to edit
 
       - label: "Podcast-gegevens"
         name: "feedinfo"
-        file: "site/data/show.toml"
+        file: "data/show.toml"
         fields:
           - {label: about_logo, name: about_logo, widget: file}
           - {label: description, name: description, widget: text}
