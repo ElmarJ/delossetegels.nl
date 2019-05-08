@@ -10,7 +10,7 @@ aliases:
 date: '2019-04-04T04:09:58-05:00'
 episode: '1'
 episode_image: uploads/episode1.jpg
-episode_banner: ''
+episode_banner: /uploads/episode1.jpg
 explicit: 'no'
 guests:
   - mmos
