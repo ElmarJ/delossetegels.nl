@@ -1,0 +1,77 @@
+baseurl = "https://delossetegels.nl/"
+languageCode = "nl-nl"
+title = "De Losse Tegels Podcast"
+googleAnalytics = ""
+paginate = "9"
+
+
+[permalinks]
+	# page = "/:filename/"
+	about = "/:filename/"
+	episode = "/:filename/"
+
+
+# The theme supports menus with up to one submenu per menu item
+# The menu name must be "Main"
+# The menus are sorted based upon their identifier
+[[Menu.Main]]
+    name = "Over"
+    identifier = "about"
+    url = "about"
+
+[[Menu.Main]]
+    name = "Mensen"
+    identifier = "guests"
+    url = "guest"
+
+[[Menu.Main]]
+    name = "Achtergrond"
+    identifier = "resources"
+    url = "#!"
+
+[[Menu.Main]]
+    name = "Over Stadsdeelpolitiek"
+    identifier = "stadsdeel"
+    url = "stadsdeel"
+    parent = "resources"
+
+[[Menu.Main]]
+    name = "Over GroenLinks Amsterdam"
+    identifier = "groenlinks"
+    url = "groenlinks"
+    parent = "resources"
+
+[params]
+site_theme = "grey"
+# site_layout = "grid"
+site_layout = "grid"
+enable_jumbo = "true"
+# custom_css = ["custom.css", "other_custom.css"]
+# enable_jumbo = "false"
+# truncate = "100"
+# itunes_subscribe = "http://itunes.apple.com/us/podcast/arrested-devops/id773888088?mt=2&uo=4&at=11lsCi"
+# android_subscribe = "http://subscribeonandroid.com/feeds.podtrac.com/VGAulpN7MY1U"
+# spotify_subscribe = "https://open.spotify.com/show/..."
+# google_play_subscribe = "https://goo.gl/app/playmusic?ibi=com.google.PlayMusic&isi=691797987&ius=googleplaymusic&link=https://play.google.com/music/m/Ihj4yege3lfmp3vs5yoopgxijpi?t%3DArrested_DevOps"
+# stitcher_subscribe = "http://www.stitcher.com/podcast/arrested-devops-2/arrested-devops"
+# soundcloud_subscribe = "http://feeds.soundcloud.com/users/soundcloud:users:203144248/sounds.rss"
+# pocketcasts_subscribe = "http://pcasts.in/feed/feeds.soundcloud.com/users/soundcloud:users:203144248/sounds.rss"
+# mailchimp_subscribe = "//arresteddevops.us3.list-manage.com/subscribe/post?u=5e4cbcac996bb9df25f970a89&amp;id=154fa76bcc"
+#rss_subscribe = "http://feed.com/myfeed" #only set this if you don't want to use the built-in feed
+media_prefix = "https://delossetegels.nl/"
+
+
+  [params.authors]
+    [params.authors.GL]
+      name	= "GroenLinks Amsterdam Centrum"
+      thumbnail = "/uploads/groenlinks-logo.png"
+      bio = "GroenLinks Amsterdam Centrum"
+      [params.authors.GL.social]
+        facebook = "GroenLinksAmsterdam"
+        twitter = "GLcentrum"
+        homepage = "https://amsterdam-centrum.groenlinks.nl/"
+
+    [params.links]
+      [params.links.GLC]
+        name = "GroenLinks Amsterdam Centrum"
+        url = "https://amsterdam-centrum.groenlinks.nl/"

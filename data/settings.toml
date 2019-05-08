@@ -1,0 +1,4 @@
+site_theme = "orange"
+site_layout = "grid"
+enable_jumbo = "true"
+truncate = 100

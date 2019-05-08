@@ -1,0 +1,34 @@
+
+about_logo = "/uploads/logo.jpg"
+copyright_notice = "Copyright 2018 [GroenLinks Amsterdam Centrum](https://amsterdam-centrum.groenlinks.nl/)"
+# itunes_subscribe = "" # e.g. http://itunes.apple.com/us/podcast/arrested-devops/id773888088?mt=2&uo=4&at=11lsCi
+# android_subscribe = "" # e.g. http://subscribeonandroid.com/feeds.podtrac.com/VGAulpN7MY1U
+spotify_subscribe = "https://open.spotify.com/show/3vE9YcizHOO9qJMEd4yCsZ"
+google_play_subscribe = "https://playmusic.app.goo.gl/?ibi=com.google.PlayMusic&isi=691797987&ius=googleplaymusic&apn=com.google.android.music&link=https://play.google.com/music/m/Iyuyt56lsusyfpahbgjjppwoo2m?t%3DDe_Losse_Tegels_Podcast%26pcampaignid%3DMKT-na-all-co-pr-mu-pod-16"
+stitcher_subscribe = "https://www.stitcher.com/podcast/groenlinks-amsterdam-centrum/de-losse-tegels"
+# soundcloud_subscribe = "" # e.g. http://feeds.soundcloud.com/users/soundcloud:users:203144248/sounds.rss
+# pocketcasts_subscribe = "" # e.g. http://pcasts.in/feed/feeds.soundcloud.com/users/soundcloud:users:203144248/sounds.rss
+# mailchimp_subscribe = "" # eg //arresteddevops.us3.list-manage.com/subscribe/post?u=5e4cbcac996bb9df25f970a89&amp;id=154fa76bcc
+description = "In De Losse Tegels bespreken lokale GroenLinksers de stadsdeelpolitiek van Amsterdam Centrum."
+copyright = "Copyright 2019 GroenLinks Amsterdam Centrum" #do not use markdown in this field; it is used in the feed
+itunes_subtitle = "De Podcast van GroenLinks Amsterdam Centrum" #no markdown or HTML
+itunes_author = "GroenLinks Amsterdam Centrum" #no markdown or HTML
+itunes_summary = "Losse tegels, welzijnswerk, vergunningen: de stadsdeelpolitiek houdt zich bezig met kleine, maar fijne onderwerpen. In deze podcast bespreekt GroenLinks Amsterdam Centrum wat er nou precies gebeurt in die politiek, en wat dat betekent voor alle bewoners, ondernemers en bezoekers van dat stadsdeel." # Limited to 4000 characters or less, plain text, no HTML
+itunes_owner_name = "Elmar Jansen"
+itunes_owner_email = "elmar@elmarjansen.nl" #contains the e-mail address that will be used to contact the owner of the Podcast for communication specifically about their Podcast on iTunes. It will not be publicly displayed on iTunes.
+itunes_image = "https://delossetegels.nl/uploads/logo.jpg" #fqdn to the image art for your podcast
+itunes_top_category = "News & Politics"
+itunes_first_sub_category = ""
+itunes_second_sub_category = ""
+language = "nl-nl"
+explicit = "clean"
+# github = ""
+facebook = "De-Losse-Tegels-2123237154442815"
+facebook_admin = ["elmarjansen"] # This needs to be one or more page admins to get domain insights
+twitter = "TegelsDe"
+twitter_domain = "delossetegels.nl" # This domain shows in twitter cards as "View on `twitter_domain`"
+# googleplus = ""
+# pinterest = ""
+# instagram = ""
+# youtube = ""
+# linkedin = ""

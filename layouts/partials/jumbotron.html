@@ -1,0 +1,67 @@
+<div class="container-fluid grid_container">
+
+<div class="jumbotron">
+    <div class="row">
+        <div class="col">
+            <p>
+                {{ .Site.Data.show.description | markdownify }}
+              </p>
+        </div>
+        <div class="col">
+          <img src="/uploads/logo.jpg?nf_resize=fit&w=200">
+      </div>
+
+
+    </div>
+
+
+    <div class = "row">
+    {{ if (isset .Site.Data.show "spotify_subscribe") }}
+      <div class = "d-flex p-2 subscribe_buttons col-md-auto">
+        <a class="btn btn-default" href="{{ .Site.Data.show.spotify_subscribe}}"><i class="fab fa-spotify"></i>&nbsp;Spotify</a>
+      </div>
+    {{ end }}
+    {{ if (isset .Site.Data.show "itunes_subscribe") }}
+      <div class = "d-flex p-2 subscribe_buttons col-md-auto">
+        <a class="btn btn-default" href="{{ .Site.Data.show.itunes_subscribe}}"><i class="fab fa-itunes-note"></i>&nbsp;iTunes</a>
+      </div>
+    {{ end }}
+    {{ if (isset .Site.Data.show "android_subscribe") }}
+      <div class = "d-flex p-2 subscribe_buttons col-md-auto">
+        <a class="btn btn-default subscribe_buttons" href="{{ .Site.Data.show.android_subscribe }}"><i class="fab fa-android"></i>&nbsp;Android</a>
+      </div>
+    {{ end }}
+    {{ if (isset .Site.Data.show "google_play_subscribe") }}
+      <div class = "d-flex p-2 subscribe_buttons col-md-auto">
+        <a class="btn btn-default" href="{{ .Site.Data.show.google_play_subscribe }}"><i class="fab fa-google-play"></i>&nbsp;Google Play Music</a>
+      </div>
+    {{ end }}
+    {{ with .Site.Data.show.stitcher_subscribe }}
+      <div class = "d-flex p-2 subscribe_buttons col-md-auto">
+        <a class="btn btn-default" href="{{ . }}"><i class="fa fa-podcast"></i>&nbsp;Stitcher</a>
+      </div>
+    {{ end }}
+    {{ if (isset .Site.Data.show "soundcloud_subscribe") }}
+      <div class = "d-flex p-2 subscribe_buttons col-md-auto">
+        <a class="btn btn-default" href="{{ .Site.Data.show.soundcloud_subscribe }}"><i class="fab fa-soundcloud"></i>&nbsp;Soundcloud</a>
+      </div>
+    {{ end }}
+    {{ if (isset .Site.Data.show "pocketcasts_subscribe") }}
+      <div class = "d-flex p-2 subscribe_buttons col-md-auto">
+        <a class="btn btn-default" href="{{ .Site.Data.show.pocketcasts_subscribe }}"><i class="fa fa-podcast"></i>&nbsp;PocketCasts</a>
+      </div>
+    {{ end }}
+    {{ if (isset .Site.Data.show "rss_subscribe" )}}
+      <div class = "d-flex p-2 subscribe_buttons col-md-auto">
+        <a class="btn btn-default" href="{{ .Site.Data.show.rss_subscribe }}"><i class="fa fa-rss"></i>&nbsp;RSS</a>
+      </div>
+    {{ else }}
+      <div class = "d-flex p-2 subscribe_buttons col-md-auto">
+        <a class="btn btn-default" href="{{"episode/index.xml" | absURL }}"><i class="fa fa-rss"></i>&nbsp;RSS</a>
+      </div>
+    {{ end }}
+
+
+</div>
+</div>
+</div>

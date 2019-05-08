@@ -1,0 +1,126 @@
+backend:
+  name: git-gateway
+
+media_folder: "site/static/uploads" # Folder where user uploaded files should go
+public_folder: "uploads"
+publish_mode: editorial_workflow
+site_url: https://delossetegels.nl
+logo_url: https://delossetegels.nl/uploads/logo.jpg
+
+collections: # A list of collections the CMS should be able to edit
+  - name: "episodes" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Afleveringen" # Used in the UI, ie.: "New Post"
+    folder: "site/content/episode" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    identifier_field: "title"
+    fields: # The fields each document in this collection have
+      - {label: "Title", name: "title", widget: "string", hint: "The title of the episode."}
+      - {label: "Shownotes", name: "body", widget: "markdown", hint: "Shownotes!"}
+      - {label: "Description", name: "Description", widget: "markdown", hint: "The description of the episode, which is used on summary pages as well as the feed. Markdown is allowed, but only links."}
+      - {label: "Aliases", name: "aliases", widget: "list", required: false, hint: "Other aliases for this episode. You may wish to create an alias to the episode number, etc."}
+      - {label: "Datum", name: "date", widget: "datetime", hint: "The release date of the episode. The hugo new episode will pre-populate this, but you may want to adjust it."}
+      - {label: "Episode", name: "episode", widget: "number", hint: "The episode number."}
+      - {label: "Episode Image", required: false, name: "episode_image", widget: "image", hint: "The square thumbnail to represent the episode. A default image is provided, and the archetype will pre-populate it. This image needs to be relative to your baseURL.	"}
+      - {label: "Episode Banner", required: false, name: "episode_banner", widget: "image", hint: "The banner to represent the episode. This image needs to be relative to your baseURL. This image will be display at the top of the episode page, as well as the top of the home page for the most recent episode. Recommend that it is at least 1024 pixels wide."}
+      - {label: "Explicit", name: "explicit", required: false, widget: "select",  options: ["yes", "no", "clean"], hint: "Whether or not the episode contains explicit content. Default value from the archetype is \"no\". Valid values are \"yes\", \"no\", or \"clean\"	"}
+      - {label: "Guests", name: "guests", widget: "relation", required: false, , collection: "guests", searchFields: ["Title"], valueField: "shortname", multiple: "true", hint: "If your episode has guests, populate the guests[] array with a comma-separated list of their names. If there is only one guest, no comma is needed."}
+      - {label: "Images", name: "images",   widget: "list", required: false, hint: "The social sharing image used by Facebook, Twitter, etc. The archetype will populate this with a default sharing image. This image needs to be relative to your baseURL."}
+      - {label: "Podcast Duration", name: "podcast_duration", required: false, widget: "", hint: "The duration of the podcast, up to the amount of seconds. E.g. \"1:08:22\" or \"59:32\""}
+      - {label: "Podcast Opname (mp3)", name: "podcast_file", required: true, widget: "file",allow_multiple: false }
+      - {label: "Podcast Size", name: "podcast_bytes", required: false, widget: "string", hint: "The length of the podcast file in bytes. This is optional, but iTunes and many other podcast players prefer this to be set. E.g. \"23907533\""}
+      - {label: "Tags", name: "tags", required: false, widget: "list", multiple: "true"}
+      - {label: "Youtube", name: "youtube", required: false, widget: "", hint: "The ID of the YouTube video (not the full URL). This will display the video on the episode page, and if you are using the row layout, it will display for the latest episode."}
+
+  - name: "guests" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Mensen" # Used in the UI, ie.: "New Post"
+    folder: "site/content/guest" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    identifier_field: "shortname"
+    fields: # The fields each document in this collection have
+      - {label: "kortenaam", name: "shortname", widget: "string", hint: "Een korte naam zonder spaties die wordt gebruikt in bestandsnamen." }
+      - {label: "Volledige Naam", name: "Title", widget: "string", hint: "The full name of the guest. This is what is displayed on the episode page, etc."}
+      - {label: "About Guest", name: "body", widget: "markdown"}
+      - {label: "Thumbnail", name: "Thumbnail", widget: "image", hint: "The image for the guest. This image must be 500 px x 500 px. You can either enter a value relative to your BaseURL, or a fully qualified URL. If you want to use the default, set this to \"\". Optional. If left blank, or not existent, a default image will be provided. You can replace this default image by putting a new 500 px x 500 px PNG image at /static/img/guest/default-guest.png in your site (not in the theme!). Please ensure that this path does NOT start with /"}
+      - {label: "Website", name: "Website", required: false, widget: "string", hint: "The guest's website. Be use to includ http(s) at the beginning."}
+      - {label: "GitHub", name: "GitHub", required: false, widget: "string", hint: "Guest's GitHub username."}
+      - {label: "Facebook", name: "Facebook", required: false, widget: "string", hint: "Guest's Facebook username. Do not use the full URL."}
+      - {label: "Twitter", name: "Twitter", required: false, widget: "string", hint: "Guest's Twitter username, without the @."}
+      - {label: "LinkedIn", name: "LinkedIn", required: false, widget: "string", hint: "	LinkedIn profile name. This is the part that comes after the https://www.linkedin.com/in/ in your profile URL."}
+      - {label: "Pinterest", name: "Pinterest", required: false, widget: "string", hint: "Pinterest profile name."}
+      - {label: "Instagram", name: "Instagram", required: false, widget: "string", hint: "Instagram profile name."}
+      - {label: "YouTube", name: "YouTube", required: false, widget: "string", hint: "YouTube profile/channel name"}
+#      - {label: "AKA", name: "AKA", widget: "relation", required: false, collection: "guests",searchFields: ["Title"], valueField: "kortenaam", hint: "The name(s) of another guest file which is an alternate identity for this guest (for example, if the bio changes, name changes, etc). This should be set in both directions (i.e., the Aka field should be set on mstratton.md and mstratton2.md pointing to each other)."}
+
+  - label: "Pagina's"
+    name: "pages"
+    files:
+      - label: "Over de Podcast"
+        name: "about"
+        file: "site/content/about.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Description, name: description, widget: markdown}
+          - {label: Body, name: body, widget: markdown}
+      - label: "Over Stadsdeelpolitiek"
+        name: "stadsdeel"
+        file: "site/content/stadsdeel.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Body, name: body, widget: markdown}
+      - label: "Over GroenLinks Amsterdam"
+        name: "groenlinks"
+        file: "site/content/contact.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Body, name: body, widget: markdown}
+          
+  - label: "Instellingen"
+    name: "settings"
+    files:
+      - label: "Site-instellingen"
+        name: "site-settings"
+        file: "site/data/settings.toml"
+        fields:
+          - {label: Theme, name: site_theme, widget: select,  options: ["blue", "grey", "orange"]}
+          - {label: Layout, name: site_layout, widget: select,  options: ["grid", "row"]}
+          - {label: Enable Jumbo, name: enable_jumbo, widget: select,  options: ["true", "false"]}
+          - {label: Truncate, name: truncate, widget: number}
+
+      - label: "Podcast-gegevens"
+        name: "feedinfo"
+        file: "site/data/show.toml"
+        fields:
+          - {label: about_logo, name: about_logo, widget: file}
+          - {label: description, name: description, widget: text}
+          - {label: Language, name: language, widget: string}
+          - {label: Copyright, name: copyright, widget: string}
+          - {label: Copyright Notice (Markdown is allowed), name: copyright_notice, widget: text}
+          - {label: iTunes Subtitle, name: itunes_subtitle, widget: string}
+          - {label: iTunes Author, name: itunes_author, widget: string}
+          - {label: iTunes Summary, name: itunes_summary, widget: text}
+          - {label: iTunes Owner Name, name: itunes_owner_name, widget: string}
+          - {label: itunes Owner Email, name: itunes_owner_email, widget: string}
+          - {label: iTunes Image, name: itunes_image, widget: file}
+          - {label: iTunes Top Category, name: itunes_top_category, widget: string}
+          - {label: iTunes First Sub Category, name: itunes_first_sub_category, widget: string}
+          - {label: itunes Second Sub Category, name: itunes_second_sub_category, widget: string}
+          - {label: "Explicit", name: "explicit", required: false, widget: "select",  options: ["yes", "no", "clean"], hint: "Whether or not the podcast contains explicit content. Default value from the archetype is \"no\". Valid values are \"yes\", \"no\", or \"clean\"	"}
+          - {label: facebook, name: facebook, widget: string, required: false}
+          - {label: facebook_admin, name: facebook_admin, widget: list, required: false}
+          - {label: github, name: github, widget: string, required: false}
+          - {label: twitter, name: twitter, widget: string, required: false}
+          - {label: twitter_domain, name: twitter_domain, widget: string, required: false}
+          - {label: googleplus, name: googleplus, widget: string, required: false}
+          - {label: pinterest, name: pinterest, widget: string, required: false}
+          - {label: instagram, name: instagram, widget: string, required: false}
+          - {label: youtube, name: youtube, widget: string, required: false}
+          - {label: linkedin, name: linkedin, widget: string, required: false}
+          - {label: disqusShortname, name: disqusShortname, widget: string, required: false}
+          - {label: itunes_subscribe, name: itunes_subscribe, widget: string, required: false}
+          - {label: android_subscribe, name: android_subscribe, widget: string, required: false}
+          - {label: spotify_subscribe, name: spotify_subscribe, widget: string, required: false}
+          - {label: google_play_subscribe, name: google_play_subscribe, widget: string, required: false}
+          - {label: stitcher_subscribe, name: stitcher_subscribe, widget: string, required: false}
+          - {label: soundcloud_subscribe, name: soundcloud_subscribe, widget: string, required: false}
+          - {label: pocketcasts_subscribe, name: pocketcasts_subscribe, widget: string, required: false}
+          - {label: mailchimp_subscribe, name: mailchimp_subscribe, widget: string, required: false}

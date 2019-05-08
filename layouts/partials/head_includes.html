@@ -1,0 +1,16 @@
+{{ if isset $.Site.Params "favicon"}}
+<link rel="icon" href="{{ $.Site.Params.favicon | absURL }}">
+{{ else }}
+<link rel="icon" href="icons/favicon.ico">
+{{ end }}
+{{ if isset $.Site.Data.settings "site_theme"}}
+<link href="{{ printf "css/%s.css" $.Site.Data.settings.site_theme | absURL}}" rel="stylesheet">
+{{ else }}
+<link href={{"css/orange.css" | absURL }} rel="stylesheet">
+{{ end }}
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+<!-- Custom CSS -->
+{{ range .Site.Data.settings.custom_css }}
+    <link rel="stylesheet" href="{{ . | absURL }}">
+{{ end }}
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
