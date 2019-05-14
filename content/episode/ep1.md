@@ -20,8 +20,8 @@ guests:
   - ygreijdanus
 images:
   - uploads/logo.jpg
-podcast_duration: '26:41'
-podcast_file: uploads/ep1.mp3
+podcast_duration: '27:28'
+podcast_file: /uploads/de-losse-tegels-aflevering-1-goede-versie.mp3
 podcast_bytes: ''
 tags: []
 youtube: ''
