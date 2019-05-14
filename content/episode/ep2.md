@@ -24,7 +24,7 @@ images:
   - uploads/logo.jpg
 podcast_duration: '33:18'
 podcast_file: /uploads/aflevering-2-uiteindelijke-versie.mp3
-podcast_bytes: '22905778'
+podcast_bytes: ''
 ---
 - Voor eenieder die de hele vergadering van 9 april even terug wil kijken, zie hier: <https://centrum.notubiz.nl/vergadering/563901/>
 
