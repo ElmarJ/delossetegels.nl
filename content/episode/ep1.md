@@ -21,7 +21,7 @@ guests:
 images:
   - uploads/logo.jpg
 podcast_duration: '27:28'
-podcast_file: /uploads/de-losse-tegels-aflevering-1-goede-versie.mp3
+podcast_file: /uploads/de-losse-tegels-aflevering-1-met-tussenstukjes.mp3
 podcast_bytes: ''
 tags: []
 youtube: ''
