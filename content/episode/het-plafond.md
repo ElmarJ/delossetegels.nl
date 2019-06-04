@@ -8,6 +8,12 @@ Description: >-
   koffie of thee?
 date: 2019-06-04T11:52:00.274Z
 episode: 4
+episode_image: /uploads/systeemplafond.jpg
+guests:
+  - mmos
+  - noostra
+  - nzeevenhooven
+  - rversantvoort
 podcast_file: /uploads/ep4.mp3
 ---
 - Hier lees je meer over de fietsen op de Dam (niet geschreven door Micha) <https://www.amsterdam.nl/actueel/nieuws/hek-dam/> 
