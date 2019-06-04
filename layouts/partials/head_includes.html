@@ -1,16 +1,17 @@
-{{ if isset $.Site.Params "favicon"}}
-<link rel="icon" href="{{ $.Site.Params.favicon | absURL }}">
-{{ else }}
-<link rel="icon" href="icons/favicon.ico">
-{{ end }}
-{{ if isset $.Site.Data.settings "site_theme"}}
-<link href="{{ printf "css/%s.css" $.Site.Data.settings.site_theme | absURL}}" rel="stylesheet">
-{{ else }}
-<link href={{"css/orange.css" | absURL }} rel="stylesheet">
-{{ end }}
-<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
-<!-- Custom CSS -->
-{{ range .Site.Data.settings.custom_css }}
-    <link rel="stylesheet" href="{{ . | absURL }}">
-{{ end }}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,700,900"> 
+<link rel="stylesheet" href="/fonts/icomoon/style.css">
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/magnific-popup.css">
+<link rel="stylesheet" href="/css/jquery-ui.css">
+<link rel="stylesheet" href="/css/owl.carousel.min.css">
+<link rel="stylesheet" href="/css/owl.theme.default.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
+
+
+<link rel="stylesheet" href="/css/aos.css">
+
+<link rel="stylesheet" href="/css/style.css">
+
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>

@@ -1,7 +1,7 @@
 ---
 shortname: ejansen
 Title: Elmar Jansen
-Thumbnail: uploads/elmar.jpg
+Thumbnail: /uploads/elmar.jpg
 Website: ''
 GitHub: elmarj
 Facebook: elmarjansen

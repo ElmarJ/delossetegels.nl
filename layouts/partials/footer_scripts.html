@@ -1,39 +1,34 @@
-<script src={{ "js/castanet-min.js" | absURL }}></script>
-<script>
-    $("#share").jsSocials({
-        shares: [
-      {
-        share: "facebook",
-        logo: "fab fa-facebook",
-      },
-      {
-        share: "twitter",           // name of share
-        label: "Tweet",             // share button text (optional)
-        logo: "fab fa-twitter",
-        {{ if (isset .Site.Data.show "twitter" )}}
-          via: "{{ .Site.Data.show.twitter }}",       // custom twitter sharing param 'via' (optional)
-        {{ end }}
-        url: "{{ .Params.permalink }}",
-        text: "{{ title .Title }}"
-      },
-      {
-        share: "linkedin",
-        logo: "fab fa-linkedin"
-      },
-      {
-        share: "pinterest",
-        logo: "fab fa-pinterest"
-      }
-    ],
-    });
-</script>
-<script>
-audiojs.events.ready(function() {
-  var as = audiojs.createAll({
-    imageLocation: '{{"img/player-graphics.gif" | relURL}}',
-    retinaImageLocation: '{{"img/player-graphics@2x.gif" | relURL}}',
-    swfLocation: '{{"swf/audiojs.swf" | relURL}}'
-   });
- });
-</script>
-{{ template "_internal/google_analytics_async.html" . }}
+<script src="/js/jquery-3.3.1.min.js"></script>
+  <script src="/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="/js/jquery-ui.js"></script>
+  <script src="/js/popper.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/owl.carousel.min.js"></script>
+  <script src="/js/jquery.stellar.min.js"></script>
+  <script src="/js/jquery.countdown.min.js"></script>
+  <script src="/js/jquery.magnific-popup.min.js"></script>
+  <script src="/js/aos.js"></script>
+
+  <script src="/js/mediaelement-and-player.min.js"></script>
+
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+                var mediaElements = document.querySelectorAll('video, audio'), total = mediaElements.length;
+
+                for (var i = 0; i < total; i++) {
+                    new MediaElementPlayer(mediaElements[i], {
+                        pluginPath: 'https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/',
+                        shimScriptAccess: 'always',
+                        success: function () {
+                            var target = document.body.querySelectorAll('.player'), targetTotal = target.length;
+                            for (var j = 0; j < targetTotal; j++) {
+                                target[j].style.visibility = 'visible';
+                            }
+                  }
+                });
+                }
+            });
+    </script>
+
+
+  <script src="/js/main.js"></script>

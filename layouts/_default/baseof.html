@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html itemscope lang="{{ .Site.LanguageCode }}">
+<html lang="{{ .Site.LanguageCode }}">
 <head>
-{{ partial "head.html" . }}
+  {{ partial "head.html" . }}
 </head>
 
 <body lang="{{ .Site.Params.Lang }}">
-{{ partial "header.html" . }}
-<div class="container middle_container">
-  {{ block "main" . }}
+  <div class="site-wrap">
+    {{ partial "mobile_menu.html" . }}
+    {{ partial "header.html" . }}
+    {{ block "main" . }}
       <!-- The part of the page that begins to differ between templates -->
-  {{ end }}
-</div> <!-- end middle_container -->
-{{ partial "footer.html" . }}
+    {{ end }}
+    {{ partial "footer.html" . }}
+  </div>
+</body>
+</html>

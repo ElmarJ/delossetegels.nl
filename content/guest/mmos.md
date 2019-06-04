@@ -1,7 +1,7 @@
 ---
 shortname: mmos
 Title: Micha Mos
-Thumbnail: uploads/micha.jpg
+Thumbnail: /uploads/micha.jpg
 Website: 'http://michamos.nl'
 GitHub: ''
 Facebook: micha.mos

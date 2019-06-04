@@ -1,12 +1,80 @@
 {{ define "main" }}
 
-{{ if isset $.Site.Data.settings "site_layout" }}
-  {{ if eq $.Site.Data.settings.site_layout "grid" }}
-    {{- partial "grid.html" . }}
-  {{ else }}
-    {{- partial "row.html" . }}
-  {{ end }}
-{{ else }}
-  {{- partial "row.html" . }}
+{{ range first 1 (where .Data.Pages "Type" "episode") }}
+<div class="site-blocks-cover overlay" style="background-image: url({{ .Params.episode_image | absURL }});" data-aos="fade" data-stellar-background-ratio="0.5">
+  <div class="container">
+    <div class="row align-items-center justify-content-center text-center">
+
+      <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
+        <h2 class="text-white font-weight-light mb-2 display-4">{{ .Title }}</h2>
+        <div class="text-white mb-4"><span class="text-white-opacity-05"><small>Aflevering {{ .Params.episode}} | {{ dateFormat "2-1-2006" .Date }}</small></span></div>
+        <p><a href="{{ .Permalink }}" class="btn btn-primary btn-sm py-3 px-4 small">Lees de Shownotes</a></p>
+
+        <div class="player">
+          <audio id="player2" preload="none" controls style="max-width: 100%">
+            <source src="{{ $.Site.Params.media_prefix }}{{ .Params.podcast_file }}" type="audio/mp3">
+          </audio>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}  
+
+<div class="site-section bg-light">
+  <div class="container">
+
+    <div class="row mb-5" data-aos="fade-up">
+      <div class="col-md-12 text-center">
+        <h2 class="font-weight-bold text-black">Laatste afleveringen</h2>
+      </div>
+    </div>
+
+{{ $paginator := .Paginate (where .Data.Pages "Type" "episode") }}
+{{ range $paginator.Pages }}
+{{ $.Scratch.Set "episode" .File.BaseFileName }}
+<div class="d-block d-md-flex podcast-entry bg-white mb-5" data-aos="fade-up">
+  <div class="image" style="background-image: url('{{ .Params.episode_image | absURL }}');"></div>
+  <div class="text">
+
+    <h3 class="font-weight-light"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+    <div class="text-white mb-3"><span class="text-black-opacity-05">Aflevering {{ .Params.episode}} | {{ dateFormat "2-1-2006" .Date }}</small></span></div>
+    <p class="mb-4">{{ .Description | markdownify | truncate 300 }}</p>
+
+    <div class="player">
+      <audio id="player2" preload="none" controls style="max-width: 100%">
+        <source src="{{ $.Site.Params.media_prefix }}{{ .Params.podcast_file }}" type="audio/mp3">
+      </audio>
+    </div>
+
+  </div>
+</div>
 {{ end }}
+
+{{ if gt $paginator.TotalPages 1 }}
+  <div class="container" data-aos="fade-up">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <div class="site-block-27">
+          <ul>
+            {{ if $paginator.HasNext }}
+              <li><a href="{{ $paginator.Prev.URL }}">&lt;</a></li>
+            {{ end }}
+            {{ range $paginator.Pagers }}
+              <li class="{{ if eq . $paginator }}active{{ end }}"><a href="{{ .URL }}">{{ .PageNumber }}</a></li>
+            {{ end }}
+            {{ if $paginator.HasNext }}
+              <li><a href="{{ $paginator.Next.URL }}">&gt;</a></li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+{{ end }}
+
+</div>
+</div>
+
 {{ end }}

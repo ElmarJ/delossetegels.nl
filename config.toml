@@ -15,12 +15,7 @@ paginate = "9"
 # The menu name must be "Main"
 # The menus are sorted based upon their identifier
 [[Menu.Main]]
-    name = "Over"
-    identifier = "about"
-    url = "about"
-
-[[Menu.Main]]
-    name = "Mensen"
+    name = "Over ons"
     identifier = "guests"
     url = "guest"
 
@@ -40,6 +35,60 @@ paginate = "9"
     identifier = "groenlinks"
     url = "groenlinks"
     parent = "resources"
+
+[[Menu.Main]]
+    name = "Links"
+    identifier = "external"
+    url = "#!"
+
+[[Menu.Main]]
+    name = "GroenLinks - Afdeling Amsterdam Centrum"
+    identifier = "GLCentrum"
+    url = "https://amsterdam-centrum.groenlinks.nl/"
+    parent = "external"
+
+[[Menu.Main]]
+    name = "Stadsdeel Centrum - Organisatie"
+    identifier = "stadsdeel_org"
+    url = "https://www.amsterdam.nl/bestuur-organisatie/stadsdelen/stadsdeel-centrum/"
+    parent = "external"
+
+[[Menu.Main]]
+    name = "Vergaderagenda Stadsdeelcommissie Centrum"
+    identifier = "notubiz"
+    url = "https://centrum.notubiz.nl"
+    parent = "external"
+    
+[[Menu.Main]]
+    name = "Stem van Centrum - bewoners agenderen in Stadsdeelcommissie"
+    identifier = "stemvan"
+    url = "https://stemvancentrum.amsterdam.nl"
+    parent = "external"
+
+[[Menu.Bottom1]]
+    name = "Mensen"
+    identifier = "guests"
+    url = "guest"
+[[Menu.Bottom1]]
+    name = "Over"
+    identifier = "about"
+    url = "about"
+[[Menu.Bottom1]]
+    name = "Alle afleveringen"
+    identifier = "episodes"
+    url = "episode"
+[[Menu.Bottom2]]
+    name = "Stadsdeelpolitiek"
+    identifier = "stadsdeel"
+    url = "stadsdeel"
+[[Menu.Bottom2]]
+    name = "Notubiz Centrum"
+    identifier = "notubiz"
+    url = "https://centrum.notubiz.nl"
+[[Menu.Bottom2]]
+    name = "GroenLinks Centrum"
+    identifier = "extern_GLCentrum"
+    url = "https://amsterdam-centrum.groenlinks.nl/"
 
 [params]
 site_theme = "grey"

@@ -1,23 +1,92 @@
-<div class = "container bottom_container">
-  <div class="row">
-  <div class="col-md-12">
-    <nav class = "navbar navbar-default navbar_footer">
-    <ul class="nav navbar-nav navbar-right">
-      {{ if (isset .Site.Data.show "copyright_notice" ) }}
-        <li>
-          <p class = "footer_copyright">{{ .Site.Data.show.copyright_notice | markdownify}}</p>
-        </li>
-      {{ end }}
-      <li>
-        &nbsp;
-      </li>
-    </ul>
-  </nav>
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="mb-5">
+          <h3 class="footer-heading mb-4">Over {{ .Site.Title }}</h3>
+          <p>{{ .Site.Data.show.description_long }}</p>
+        </div>
 
+        <div class="mb-5">
+          <h3 class="footer-heading mb-4">Recente Afleveringen</h3>
+          <div class="block-25">
+            <ul class="list-unstyled">
+              {{ range first 3 (where .Pages "Type" "episode") }}
+              <li class="mb-3">
+                <a href="{{ .Permalink }}" class="d-flex">
+                  <figure class="image mr-4">
+                    <img src="{{ .Params.episode_image | absURL }}" alt="" class="img-fluid">
+                  </figure>
+                  <div class="text">
+                    <h3 class="heading font-weight-light">Aflevering {{ .Params.episode }}: {{ .Title }}</h3>
+                  </div>
+                </a>
+              </li>
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+      <div class="col-lg-4 mb-5 mb-lg-0">
+        <div class="row mb-5">
+          <div class="col-md-12">
+            <h3 class="footer-heading mb-4">Links</h3>
+          </div>
+          <div class="col-md-6 col-lg-6">
+            <ul class="list-unstyled">
+              {{ range sort .Site.Menus.bottom1 "Identifier"}}
+                <li><a href="{{ .URL | absURL }}">{{ .Name }}</a></li>
+              {{ end }}
+            </ul>
+          </div>
+          <div class="col-md-6 col-lg-6">
+            <ul class="list-unstyled">
+                {{ range sort .Site.Menus.bottom2 "Identifier"}}
+                <li><a href="{{ .URL | absURL }}">{{ .Name }}</a></li>
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="footer-heading mb-4">Follow Us</h3>
+
+            <div>
+              {{ partial "social_links.html" . }}
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-lg-4 mb-5 mb-lg-0">
+        <div class="mb-5">
+          <h3 class="footer-heading mb-2">Subscribe</h3>
+          <p><a href="{{ .Site.Data.show.spotify_subscribe}}">On Spotify</a></p>
+          <p><a href="{{ .Site.Data.show.itunes_subscribe}}">On iTunes</a></p>
+          <p><a href="{{ .Site.Data.show.google_play_subscribe}}">On Google Podcast</a></p>
+          <p><a href="{{ .Site.Data.show.stitcher_subscribe}}">On Stitcher</a></p>
+        </div>
+      </div>
+    </div>
+
+    {{ if (isset .Site.Data.show "copyright_notice" ) }}
+    <div class="row pt-5 mt-5 text-center">
+      <div class="col-md-12">
+          {{ if (isset .Site.Data.show "copyright_notice" ) }}
+          <p>{{ .Site.Data.show.copyright_notice | markdownify}}</p>
+          {{ end }}
+          <p>      
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          Made with Podca template <i class="icon-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          </p>
+      </div>
+    </div>
+    {{ end }}
   </div>
-</div>
-</div>
-{{ partial "footer_scripts.html" . }}
+</footer>
 
-</body>
-</html>
+{{ partial "footer_scripts.html" . }}

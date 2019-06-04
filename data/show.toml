@@ -1,7 +1,7 @@
 
 about_logo = "/uploads/logo.jpg"
 copyright_notice = "Copyright 2018 [GroenLinks Amsterdam Centrum](https://amsterdam-centrum.groenlinks.nl/)"
-# itunes_subscribe = "" # e.g. http://itunes.apple.com/us/podcast/arrested-devops/id773888088?mt=2&uo=4&at=11lsCi
+itunes_subscribe = "https://podcasts.apple.com/nl/podcast/de-losse-tegels-podcast/id1459047922?l=en" # e.g. http://itunes.apple.com/us/podcast/arrested-devops/id773888088?mt=2&uo=4&at=11lsCi
 # android_subscribe = "" # e.g. http://subscribeonandroid.com/feeds.podtrac.com/VGAulpN7MY1U
 spotify_subscribe = "https://open.spotify.com/show/3vE9YcizHOO9qJMEd4yCsZ"
 google_play_subscribe = "https://playmusic.app.goo.gl/?ibi=com.google.PlayMusic&isi=691797987&ius=googleplaymusic&apn=com.google.android.music&link=https://play.google.com/music/m/Iyuyt56lsusyfpahbgjjppwoo2m?t%3DDe_Losse_Tegels_Podcast%26pcampaignid%3DMKT-na-all-co-pr-mu-pod-16"
@@ -10,6 +10,7 @@ stitcher_subscribe = "https://www.stitcher.com/podcast/groenlinks-amsterdam-cent
 # pocketcasts_subscribe = "" # e.g. http://pcasts.in/feed/feeds.soundcloud.com/users/soundcloud:users:203144248/sounds.rss
 # mailchimp_subscribe = "" # eg //arresteddevops.us3.list-manage.com/subscribe/post?u=5e4cbcac996bb9df25f970a89&amp;id=154fa76bcc
 description = "In De Losse Tegels bespreken lokale GroenLinksers de stadsdeelpolitiek van Amsterdam Centrum."
+description_long = "Losse tegels, welzijnswerk, vergunningen: de stadsdeelpolitiek houdt zich bezig met kleine, maar fijne onderwerpen. In deze podcast bespreekt GroenLinks Amsterdam Centrum wat er nou precies gebeurt in die politiek, en wat dat betekent voor alle bewoners, ondernemers en bezoekers van dat stadsdeel."
 copyright = "Copyright 2019 GroenLinks Amsterdam Centrum" #do not use markdown in this field; it is used in the feed
 itunes_subtitle = "De Podcast van GroenLinks Amsterdam Centrum" #no markdown or HTML
 itunes_author = "GroenLinks Amsterdam Centrum" #no markdown or HTML

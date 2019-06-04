@@ -1,0 +1,22 @@
+
+        {{ if (isset .Site.Data.show "facebook" ) }}
+            <a class = "pl-0 pr-3" href="https://facebook.com/{{ .Site.Data.show.facebook }}"><span class="icon-facebook"></span></a>
+        {{ end }}
+        {{ if (isset .Site.Data.show "twitter" ) }}
+            <a class = "pl-0 pr-3" href="https://twitter.com/{{ .Site.Data.show.twitter }}"><span class="icon-twitter"></span></a>
+        {{ end }}
+        {{ if (isset .Site.Data.show "youtube" ) }}
+            <a class = "pl-0 pr-3"  href="https://youtube.com/{{ .Site.Data.show.youtube }}"><i class="fab fa-youtube-square fa-2x"></i></a>
+        {{ end }}
+        {{ if (isset .Site.Data.show "pinterest" ) }}
+            <a class = "pl-0 pr-3" href="https://www.pinterest.com/{{ .Site.Data.show.pinterest }}"><span class="icon-pinterest"></span></a>
+        {{ end }}
+        {{ if (isset .Site.Data.show "instagram" ) }}
+            <a class = "pl-0 pr-3s" href="https://www.instagram.com/{{ .Site.Data.show.instagram }}"><span class="icon-instagram"></span></a>          </li>
+        {{ end }}
+        {{ if (isset .Site.Data.show "linkedin" ) }}
+            <a class = "pl-0 pr-3" href="https://www.linkedin.com/in{{ .Site.Data.show.linkedin }}"><span class="icon-linkedin"></span></a>
+        {{ end }}
+        {{ if (isset .Site.Data.show "github" ) }}
+            <a class = "pl-0 pr-3" href="https://github.com/{{ .Site.Data.show.github }}"><span class="icon-github"></span></a>
+        {{ end }}
