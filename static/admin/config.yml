@@ -50,7 +50,6 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Pinterest", name: "Pinterest", required: false, widget: "string", hint: "Pinterest profile name."}
       - {label: "Instagram", name: "Instagram", required: false, widget: "string", hint: "Instagram profile name."}
       - {label: "YouTube", name: "YouTube", required: false, widget: "string", hint: "YouTube profile/channel name"}
-#      - {label: "AKA", name: "AKA", widget: "relation", required: false, collection: "guests",searchFields: ["Title"], valueField: "kortenaam", hint: "The name(s) of another guest file which is an alternate identity for this guest (for example, if the bio changes, name changes, etc). This should be set in both directions (i.e., the Aka field should be set on mstratton.md and mstratton2.md pointing to each other)."}
 
   - label: "Pagina's"
     name: "pages"

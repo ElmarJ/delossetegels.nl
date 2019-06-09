@@ -1,11 +1,12 @@
 
 about_logo = "/uploads/logo.jpg"
 copyright_notice = "Copyright 2018 [GroenLinks Amsterdam Centrum](https://amsterdam-centrum.groenlinks.nl/)"
-itunes_subscribe = "https://podcasts.apple.com/nl/podcast/de-losse-tegels-podcast/id1459047922?l=en" # e.g. http://itunes.apple.com/us/podcast/arrested-devops/id773888088?mt=2&uo=4&at=11lsCi
+itunes_subscribe = "https://geo.itunes.apple.com/nl/podcast/de-losse-tegels-podcast/id1459047922?mt=2&app=itunes" # e.g. http://itunes.apple.com/us/podcast/arrested-devops/id773888088?mt=2&uo=4&at=11lsCi
 # android_subscribe = "" # e.g. http://subscribeonandroid.com/feeds.podtrac.com/VGAulpN7MY1U
 spotify_subscribe = "https://open.spotify.com/show/3vE9YcizHOO9qJMEd4yCsZ"
 google_play_subscribe = "https://playmusic.app.goo.gl/?ibi=com.google.PlayMusic&isi=691797987&ius=googleplaymusic&apn=com.google.android.music&link=https://play.google.com/music/m/Iyuyt56lsusyfpahbgjjppwoo2m?t%3DDe_Losse_Tegels_Podcast%26pcampaignid%3DMKT-na-all-co-pr-mu-pod-16"
-stitcher_subscribe = "https://www.stitcher.com/podcast/groenlinks-amsterdam-centrum/de-losse-tegels"
+google_podcast = "https://www.google.com/podcasts?feed=aHR0cHM6Ly9kZWxvc3NldGVnZWxzLm5sL2VwaXNvZGUvaW5kZXgueG1s"
+stitcher_subscribe = "https://www.stitcher.com/s?fid=388255&refid=stpr"
 # soundcloud_subscribe = "" # e.g. http://feeds.soundcloud.com/users/soundcloud:users:203144248/sounds.rss
 # pocketcasts_subscribe = "" # e.g. http://pcasts.in/feed/feeds.soundcloud.com/users/soundcloud:users:203144248/sounds.rss
 # mailchimp_subscribe = "" # eg //arresteddevops.us3.list-manage.com/subscribe/post?u=5e4cbcac996bb9df25f970a89&amp;id=154fa76bcc
@@ -23,13 +24,13 @@ itunes_first_sub_category = ""
 itunes_second_sub_category = ""
 language = "nl-nl"
 explicit = "clean"
-# github = ""
+github = "ElmarJ/delossetegels.nl"
 facebook = "De-Losse-Tegels-2123237154442815"
 facebook_admin = ["elmarjansen"] # This needs to be one or more page admins to get domain insights
 twitter = "TegelsDe"
 twitter_domain = "delossetegels.nl" # This domain shows in twitter cards as "View on `twitter_domain`"
 # googleplus = ""
 # pinterest = ""
-# instagram = ""
+instagram = "delossetegels"
 # youtube = ""
 # linkedin = ""
