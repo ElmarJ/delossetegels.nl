@@ -24,7 +24,7 @@ images:
 podcast_duration: '33:04'
 podcast_file: /uploads/aflevering-3-goede-versie.mp3
 ---
-* Heb jij een supergoed idee voor het Centrum maar mist het geld? Dien je eigen idee in en zie je plannen misschien gerealiseerd worden: [**centrumbegroot.amsterdam.nl**](https://maps.amsterdam.nl/provincialestaten2019/)
+* Heb jij een supergoed idee voor het Centrum maar mist het geld? Dien je eigen idee in en zie je plannen misschien gerealiseerd worden: [**centrumbegroot.amsterdam.nl**](https://centrumbegroot.amsterdam.nl/)
 * Wil jij ook een **Centrum Begroot-poster**? Dat kan! Mail naar posters@delossetegels.nl
   en je krijgt hem opgestuurd. 
 * We zouden een lijst toevoegen van wat er onder **Alternatief Personenvervoer** valt. Volgens Micha kan die er niet komen. Waarom niet? Lees [hier](https://centrum.notubiz.nl/document/7578770/1/Wijziging_APV_alt_personenvervoer_-_Beantwoording_sdc_vragenr) zijn beantwoording op de vragen van de stadsdeelcommissie.
