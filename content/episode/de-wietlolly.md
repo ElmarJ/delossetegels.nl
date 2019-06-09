@@ -10,10 +10,10 @@ Description: >-
   fietsers.
 
 
-  Kijk voor de shownotes op delossetegels.nl/ep5
+  Kijk voor de shownotes op <https://delossetegels.nl/de-wietlolly>
 aliases:
   - ep5
-date: 2019-06-03T19:02:15.058Z
+date: 2019-06-05T19:02:15.058Z
 episode: 5
 episode_image: /uploads/21156627740_d59a81e295_b.jpg
 explicit: clean
