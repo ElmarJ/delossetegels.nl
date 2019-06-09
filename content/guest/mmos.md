@@ -3,6 +3,7 @@ shortname: mmos
 Title: Micha Mos
 Thumbnail: /uploads/micha.jpg
 Website: 'http://michamos.nl'
+Function: Stadsdeelbestuurder
 GitHub: ''
 Facebook: micha.mos
 Twitter: MichaMos84

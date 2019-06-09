@@ -1,6 +1,7 @@
 ---
 shortname: ygreijdanus
 Title: Yvo Greijdanus
+Function: Penningmeester Afdeling Centrum & Lid Steunfractie
 Thumbnail: /uploads/yvo.jpg
 Twitter: yvogre
 ---

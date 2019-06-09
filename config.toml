@@ -66,13 +66,9 @@ paginate = "9"
     parent = "external"
 
 [[Menu.Bottom1]]
-    name = "Mensen"
+    name = "Over ons"
     identifier = "guests"
     url = "guest"
-[[Menu.Bottom1]]
-    name = "Over"
-    identifier = "about"
-    url = "about"
 [[Menu.Bottom1]]
     name = "Alle afleveringen"
     identifier = "episodes"

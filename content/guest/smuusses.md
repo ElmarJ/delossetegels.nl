@@ -1,6 +1,7 @@
 ---
 shortname: smuusses
 Title: Sonja Muusses
+Function: Voorzitter Afdeling Centrum & Lid Steunfractie
 Thumbnail: /uploads/sonja.jpg
 Twitter: SonjaMuusses
 ---

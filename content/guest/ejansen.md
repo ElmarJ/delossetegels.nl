@@ -2,6 +2,7 @@
 shortname: ejansen
 Title: Elmar Jansen
 Thumbnail: /uploads/elmar.jpg
+Function: Duo-lid Stadsdeelcommissie
 Website: ''
 GitHub: elmarj
 Facebook: elmarjansen

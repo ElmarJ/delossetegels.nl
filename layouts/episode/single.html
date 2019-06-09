@@ -41,4 +41,55 @@
       </div>
   </div>
 </div>
+
+{{ with .Params.guests }}
+
+<div class="site-section">
+  <div class="container" data-aos="fade-up">
+    <div class="row mb-5">
+      <div class="col-md-12 text-center">
+        <h2 class="font-weight-bold text-black">Aanwezig bij deze aflevering</h2>
+      </div>
+    </div>
+    <div class="row">
+
+  {{ range $name := . }}
+  {{ $.Scratch.Set "person" $name }}
+  {{- range where $.Site.Pages "Type" "guest" -}}
+    {{- if eq .File.BaseFileName ($.Scratch.Get "person") -}}
+    {{- $.Scratch.Set "guest-exist" "true" -}}
+
+      <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
+        <div class="team-member">
+
+          <img src="{{ .Params.thumbnail }}" alt="{{ .Title }}" class="w-100 mx-auto img-fluid">
+
+          <div class="text">
+
+            <h2 class="mb-2 font-weight-light h4">{{ .Title }}</h2>
+            <span class="d-block mb-2 text-white-opacity-05">{{ .Params.Function }}</span>
+            <p class="mb-4">{{ .Content | markdownify }}</p>
+            <p>
+                {{ with .Params.Facebook }}<a href="https://www.facebook.com/{{ . }}" class="text-white p-2"><span class="icon-facebook"></span></a>{{ end }}
+                {{ with .Params.Twitter }}<a href="https://twitter.com/{{ . }}" class="text-white p-2"><span class="icon-twitter"></span></a>{{ end }}
+                {{ with .Params.LinkedIn }}<a href="https://www.linkedin.com/{{ . }}" class="text-white p-2"><span class="icon-linkedin"></span></a>{{ end }}
+                {{ with .Params.Instagram }}<a href="https://www.instagram.com/{{ . }}" class="text-white p-2"><span class="icon-instagram"></span></a>{{ end }}
+                {{ with .Params.GitHub }}<a href="https://github.com/{{ . }}" class="text-white p-2"><span class="icon-github"></span></a>{{ end }}
+                {{ with .Params.Pinterest }}<a href="https://www.pinterest.com/{{ . }}" class="text-white p-2"><span class="icon-pinterest"></span></a>{{ end }}
+                {{ with .Params.Youtube }}<a href="https://www.youtube.com/{{ . }}" class="text-white p-2"><span class="icon-youtube"></span></a>{{ end }}
+            </p>
+          </div>
+
+        </div>
+      </div>
+      {{ end }}
+      {{ end }}
+      {{ end }}
+
+    </div>
+  </div>
+</div>
+
+{{ end }}
+
 {{ end }}

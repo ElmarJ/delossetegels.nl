@@ -1,6 +1,7 @@
 ---
 shortname: rversantvoort
 Title: Roos Versantvoort
+Function: Lid Steunfractie
 Thumbnail: /uploads/roos.jpg
 Facebook: roos.versantvoort
 Twitter: Roosvsantvoort
