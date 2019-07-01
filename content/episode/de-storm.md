@@ -9,6 +9,10 @@ Description: >-
 date: 2019-06-17T17:39:55.886Z
 episode: 6
 episode_image: /uploads/storm-3630706_960_720.jpg
+guests:
+  - nzeevenhooven
+  - rversantvoort
+  - mmos
 podcast_duration: '28:47'
 podcast_file: /uploads/aflevering-6-de-storm-goed-versie.mp3
 ---
