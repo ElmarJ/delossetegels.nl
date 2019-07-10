@@ -15,6 +15,7 @@ guests:
   - ygreijdanus
 podcast_file: /uploads/ep8.mp3
 ---
+* Meer informatie over de [nieuwe huisvestingsverordening](https://www.amsterdam.nl/wonen-leefomgeving/wonen/2020-inspraak/)
 * Bekijk de stukken en opname van de besproken [Stadsdeelcommissie-vergadering van 2 juli](https://centrum.notubiz.nl/vergadering/563908/Stadsdeelcommissie%2002-07-2019).
 * Meer informatie over [gesprekken over raamprostitutie 10 juli en 12 juli](https://www.amsterdam.nl/zorg-ondersteuning/prostitutie/artikel/).
 * Lees hier het bericht van het stadsdeel over [over de rechtzaak "Seafood Shop" in de Leidsestraat](https://www.amsterdam.nl/nieuws-centrum/the-seafood-shop-moet-bedrijfsvoering-aa/)
