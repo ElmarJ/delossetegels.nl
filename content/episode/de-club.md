@@ -2,7 +2,7 @@
 title: De Club
 Description: >-
   Micha had een voetbaltoernooi en het Jan-jaarfeest, Ilse vertelt over een
-  gewonnen rechtzaak, de burgermeester wil praten over prostitutie en in de
+  gewonnen rechtszaak, de burgemeester wil praten over prostitutie en in de
   stadsdeelcommissie ging het over een club op het Rembrandtplein. Spoiler: Yvo
   heeft deze keer helaas geen bonnetje.
 date: 2019-07-10T08:46:32.421Z
