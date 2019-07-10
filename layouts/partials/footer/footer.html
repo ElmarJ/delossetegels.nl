@@ -11,7 +11,8 @@
           <h3 class="footer-heading mb-4">Recente Afleveringen</h3>
           <div class="block-25">
             <ul class="list-unstyled">
-              {{ range first 3 (where .Pages "Type" "episode") }}
+              {{ range first 4 (where .Site.Pages "Type" "episode") }}
+              {{ if .Params.episode }}
               <li class="mb-3">
                 <a href="{{ .Permalink }}" class="d-flex">
                   <figure class="image mr-4">
@@ -22,6 +23,7 @@
                   </div>
                 </a>
               </li>
+              {{ end }}
               {{ end }}
             </ul>
           </div>
