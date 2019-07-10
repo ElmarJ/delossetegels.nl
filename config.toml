@@ -70,10 +70,6 @@ paginate = "9"
     identifier = "guests"
     url = "guest"
 [[Menu.Bottom1]]
-    name = "Alle afleveringen"
-    identifier = "episodes"
-    url = "episode"
-[[Menu.Bottom2]]
     name = "Stadsdeelpolitiek"
     identifier = "stadsdeel"
     url = "stadsdeel"
