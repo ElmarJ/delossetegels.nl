@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
 <head>
-  {{ partial "head.html" . }}
+  {{ partial "head/head.html" . }}
 </head>
 
 <body lang="{{ .Site.Params.Lang }}">
   <div class="site-wrap">
     {{ partial "mobile_menu.html" . }}
-    {{ partial "header.html" . }}
+    {{ partial "head/header.html" . }}
     {{ block "main" . }}
       <!-- The part of the page that begins to differ between templates -->
     {{ end }}
-    {{ partial "footer.html" . }}
+    {{ partial "footer/footer.html" . }}
   </div>
 </body>
 </html>
