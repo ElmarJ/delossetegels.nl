@@ -8,7 +8,8 @@ GitHub: elmarj
 Facebook: elmarjansen
 Twitter: '@elmarj'
 Pinterest: ''
-Instagram: ''
+Instagram: 'elmarjansen'
 YouTube: ''
+Linkedin: 'elmarjansen'
 ---
 Elmar (1981) is docent politicologie aan de UvA, speelt graag gitaar, groeide op in Centrum en is duo-lid van de Stadsdeelcommissie.
