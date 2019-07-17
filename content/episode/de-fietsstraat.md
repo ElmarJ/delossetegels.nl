@@ -5,6 +5,11 @@ date: 2019-07-17T11:01:38.211Z
 episode: 9
 episode_image: /uploads/de-fietsstraat.jpg
 episode_banner: /uploads/de-fietsstraat.jpg
+guests:
+  - mmos
+  - noostra
+  - ygreijdanus
+  - smuusses
 podcast_duration: '36:32'
 podcast_file: /uploads/9-de-fietsstraat.mp3
 podcast_bytes: '33200000'
