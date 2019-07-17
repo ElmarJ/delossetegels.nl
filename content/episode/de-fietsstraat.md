@@ -9,4 +9,4 @@ podcast_duration: '36:32'
 podcast_file: /uploads/9-de-fietsstraat.mp3
 podcast_bytes: '33200000'
 ---
-Het bomen initiatief van de gezonde stad kan je [hier](https://bomenvooramsterdam.org/) vinden.
+Het bomeninitiatief van de gezonde stad kan je [hier](https://bomenvooramsterdam.org/) vinden.
