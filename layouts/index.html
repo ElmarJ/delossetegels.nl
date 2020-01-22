@@ -58,7 +58,7 @@
       <div class="col-md-12 text-center">
         <div class="site-block-27">
           <ul>
-            {{ if $paginator.HasNext }}
+            {{ if $paginator.HasPrev }}
               <li><a href="{{ $paginator.Prev.URL }}">&lt;</a></li>
             {{ end }}
             {{ range $paginator.Pagers }}
