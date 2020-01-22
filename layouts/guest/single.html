@@ -79,7 +79,7 @@
         <h3>Afleveringen met {{ .Title }}</h3>
         <div class="list-group guest_episode_list">
             {{ $.Scratch.Set "guest-name" .File.BaseFileName }}
-            {{ range $page := where $.Site.Pages "Type" "episode" }}
+            {{ range $page := where $.Site.RegularPages "Type" "episode" }}
               {{ range $page.Params.guests }}
                 {{ if eq  . ($.Scratch.Get "guest-name") }}
                     <a href = "{{$page.Permalink}}" class = "guest_page_episode_link list-group-item list-group-item-action">{{$page.Title}}</a>
@@ -89,7 +89,7 @@
             {{- with .Params.Aka -}}
               {{ range $name := . }}
                 {{- $.Scratch.Set "guest-name" $name -}}
-                {{- range $page := where $.Site.Pages "Type" "episode" -}}
+                {{- range $page := where $.Site.RegularPages "Type" "episode" -}}
                   {{- range $page.Params.guests -}}
                     {{- if eq  . ($.Scratch.Get "guest-name") -}}
                         <a href = "{{$page.Permalink}}" class = "guest_page_episode_link list-group-item list-group-item-action">{{$page.Title}}</a>

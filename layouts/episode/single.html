@@ -55,7 +55,7 @@
 
   {{ range $name := . }}
   {{ $.Scratch.Set "person" $name }}
-  {{- range where $.Site.Pages "Type" "guest" -}}
+  {{- range where $.Site.RegularPages "Type" "guest" -}}
     {{- if eq .File.BaseFileName ($.Scratch.Get "person") -}}
     {{- $.Scratch.Set "guest-exist" "true" -}}
 
