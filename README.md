@@ -8,5 +8,3 @@ Over de pagina:
 - CMS: [Netlify CMS](https://www.netlifycms.org)
 - Generator: [Hugo](https://gohugo.io)
 - Template based on [Castanet](https://www.castanet-theme.com/)
-
-Using Netlify Large Media for /uploads/ -folder.
